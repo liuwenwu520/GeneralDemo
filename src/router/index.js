@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Index from '@/index/Index'
-import SingIn from '@/sign-in/SignIn'
-import Manage from '@/manage/Manage'
+import Index from '@/components/index/Index'
+import SingIn from '@/components/sign-in/SignIn'
+import Manage from '@/components/manage/Manage'
 
 Vue.use(Router)
 

@@ -18,9 +18,8 @@
 </template>
 
 <script>
-import LeftMenu from '@/manage/LeftMenu'
-import ManageHeader from '@/manage/Header'
-import store from '@/vuex/store'
+import LeftMenu from '@/components/manage/LeftMenu'
+import ManageHeader from '@/components/manage/Header'
 export default {
   name: 'Manage',
   data () {
@@ -32,7 +31,6 @@ export default {
     'left-menu': LeftMenu,
     'manage-header': ManageHeader
   },
-  store: store,
   mounted () {
     this.isLogin = this.$store.state.isLogin
   }
@@ -47,12 +45,12 @@ export default {
   left: 0;
   top: 0;
   #header{
-    background-color: #3C3F41;
-    border: 1px solid #555;
+    background-color: #74b9ff;
+    /*border: 1px solid #555;*/
     box-sizing: border-box;
   }
   #aside{
-    background-color: #545C64;
+    background-color: #636e72;
   }
   #footer{
 
