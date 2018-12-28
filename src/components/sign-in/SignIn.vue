@@ -14,7 +14,7 @@
                   <el-input class="input" v-model="formJson.username" placeholder="用户名"></el-input>
                 </el-form-item>
                 <el-form-item class="input-group">
-                  <el-input class="input" v-model="formJson.password" placeholder="密码"></el-input>
+                  <el-input type="password" class="input" v-model="formJson.password" placeholder="密码"></el-input>
                 </el-form-item>
                 <el-form-item class="input-group">
                   <el-button type="success" class="input" @click="signIn()">登录</el-button>
@@ -45,17 +45,14 @@ export default {
     signIn () {
       this.loading = true
       if (this.formJson.username !== '' && this.formJson.password !== '') {
-        const url = '/login'
+        const url = 'login'
         this.axios.post(url, this.formJson)
           .then(response => {
-            console.log('请求结果')
-            console.log(response)
             // 请求成功
             if (response.status === 200) {
               let data = response.data
               if (data['status'] === 200) {
-                console.log(this.axios)
-                this.axios.get('/admin').then(response=>{
+                this.axios.get('/admin').then(response => {
                   console.log('请求/admin')
                   console.log(response)
                 })
@@ -103,7 +100,7 @@ export default {
     }
      #form{
        border: 1px solid #ddd;
-       border-radius: 5px;
+       border-radius: 3px;
        background-color: #fff;
        width: 410px;
        height: 250px;

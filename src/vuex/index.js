@@ -13,11 +13,13 @@ let index = new Vuex.Store({
     }
   },
   mutations: {
+    // 改变登录状态
     changeLoginStatus (state, status) {
       if (typeof (status) === 'boolean') {
         session.set('isLogin', status)
       }
     },
+    // 更新user
     updateUser (state, u) {
       if (u['nickname']) {
         session.set('nickname', u['nickname'])
